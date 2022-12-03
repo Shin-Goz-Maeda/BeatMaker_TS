@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background-color: black;
+  color: white;
+}
+
+body {
+  width: 100%;
+  height: 1000px;
+  min-width: 1080px;
+}
+
+
+
+/* ----- ヘッダー ----- */
+header {
+  width: 100%;
+  min-width: 1080px;
+  height: 10%;
+  margin:40px 40px 70px 40px;
+  text-align: center;
+  font-size: 6rem;
+}
+
+
+
+/* ----- 中央のステータスグラウンド ----- */
+#status {
+  height: 60%;
+  display: flex;
+  position: relative;
+  min-width: 1080px;
+  min-height: 400px;
+}
+
+/* --- ボリューム全体（左） --- */
+#volumeControl {
+  position: absolute;
+  left: 15%;
+}
+
+#volume {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 10px;
+}
+
+input[type=range][orient=vertical] {
+  width: 2px;
+  height: 250px;
+  -webkit-appearance: slider-vertical;
+  cursor: pointer;
+  background-color: white;
+  padding: 0 4px;
+  border-radius: 10px;
+}
+
+/* --- グラウンド全体（中央） --- */
+#ground {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.playground {
+  height: 260px;
+  width: 260px;
+  position: relative;
+  background: linear-gradient(lightgreen, yellow, orange);
+  border-radius: 50%;
+}
+
+.state {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 2.5rem;
+  border-radius: 50%;
+}
+
+/* --- メニュー全体（右） --- */
+#menu {
+  height: 100%;
+  position: absolute;
+  left: 75%;
+}
+
+ul {
+  position: relative;
+  align-items: center;
+}
+
+li {
+  font-size: 3rem;
+  list-style: none;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.name::before {
+  width: 20px;
+  height: 20px;
+  content: '';
+  display: inline-block;
+  padding-right: 5px;
+  background-image: url(img/menu/recode.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 6px;
+}
+
+
+/* ----- 音声コントロール ----- */
+#soundControl {
+
+  width: 100%;
+  height: 20%;
+  min-width: 1080px;
+}
+
+/* --- コントロールボタン --- */
+#feature {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(11, 11, 11);
+}
+
+.btn {
+  margin-right:  30px;
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: rgb(11, 11, 11);
+}
+
+.controlIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.mainBtn {
+  width: 45px;
+  height: 45px;
+}
+
+#repeat {
+  background-color: rgb(11, 11, 11);
+}
+
+#shuffle {
+  background-color: rgb(11, 11, 11);
+}
+
+/* --- 再生時間 --- */
+#playTime {
+  height: 50px;
+  text-align: center;
+  background-color: rgb(11, 11, 11);
+}
+
+#playTime p {
+  background-color: rgb(11, 11, 11);
+}
+
+#progress {
+  width: 25%;
+}
+
+#playBackPosition { 
+  padding-right: 10px;
+  font-size: 1.5rem;
+  background-color: rgb(11, 11, 11);
+}
+
+#endPosition {
+  padding-left: 10px;
+  font-size: 1.5rem;
+  background-color: rgb(11, 11, 11);
+}
+
+
+
+/* ----- フッター ----- */
+footer {
+  width: 100%;
+  height: 10%;
+  min-width: 1080px;
+  text-align: center;
+}
+
+footer p {
+  background-color: rgb(3, 3, 3);
+  line-height: 50px;
+  font-size: 10px;
+}
+
+
+
+/* ----- 再生次アニメーション ----- */
+.rotate {
+  animation: rotate-anime 4s linear infinite;
+}
+
+@keyframes rotate-anime {
+  0% {
+    transform: rotate(0);
+    border-radius: 50%;
+  }
+  10% {
+    border-radius: 30% 50% 80% 50% / 60% 40% 30% 50%; 
+  }
+  20% {
+    border-radius: 50% 80% 40% 70% / 50% 60% 80% 70%; 
+  }
+  30% {
+    border-radius: 70% 60% 60% 90% / 70% 80% 40% 90%; 
+  }
+  40% {
+    border-radius: 60% 20% 70% 60% / 40% 70% 50% 60%; 
+  }
+  50% {
+    border-radius: 50% 30% 60% 50% / 30% 20% 40% 50%; 
+  }
+  60% {
+    border-radius: 70% 50% 40% 60% / 60% 40% 70% 30%; 
+  }
+  70% {
+    border-radius: 50% 70% 20% 70% / 70% 30% 80% 60%; 
+  }
+  80% {
+    border-radius: 80% 40% 70% 60% / 40% 60% 50% 60%; 
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 50%;
+  }
+}

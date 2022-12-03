@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music WebApp</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1 id="header">Music Web application</h1>
+    </header>
+    <div id="status">
+      <div id="volumeControl" class="volumeControl">
+        <div id="volumeIcon">
+          <img id="volume" src="img/volume/volume.png" alt="ボリュームアイコン">
+        </div>
+        <div id="volumeLevel">
+          <input id="volumeChange" type="range" value="0.5" min="0.0" max="1.0" step="0.05" orient="vertical">
+        </div>
+      </div>
+      <div id="ground">
+        <div id="playground" class="playground">
+            <img class="state" src="img/playGround/startBtn.png" alt="再生ボタン">
+        </div>
+      </div>
+      <div id="menu" class="menu">
+        <ul>
+          <li class="sounds">
+            <p class="name">abstract science</p>
+            <audio id="sound1" src="music/abstract-science.mp3"></audio>
+          </li>
+          <li class="sounds">
+            <p class="name">beauty of technology</p>
+            <audio id="sound2" src="music/beauty-of-technology.mp3"></audio>
+          </li>
+          <li class="sounds">
+            <p class="name">technology light ambient</p>
+            <audio id="sound3" src="music/business-uplifting-optimistic-technology-light-ambient-music.mp3"></audio>
+          </li>
+          <li class="sounds">
+            <p class="name">elegant ambient science</p>
+            <audio id="sound4" src="music/elegant-ambient-science.mp3"></audio>
+          </li>
+          <li class="sounds">
+            <p class="name">indeterminate</p>
+            <audio id="sound5" src="music/indeterminate.mp3"></audio>
+          </li>
+          <li class="sounds">
+            <p class="name">time technology</p>
+            <audio id="sound6" src="music/time-technology.mp3"></audio>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="soundControl" class="soundControl">
+      <div id="feature" class="feature">
+        <div id="shuffle" class="btn">
+          <img class="controlIcon shuffle" src="img/feature/shuffleBtn.png" alt="シャッフルボタン">
+        </div>
+        <div id="return" class="btn">
+          <img class="controlIcon" src="img/feature/returnBtn.png" alt="リターンボタン">
+        </div>
+        <div id="play" class="btn">
+          <img class="controlIcon mainBtn" src="img/feature/startBtn.png" alt="再生スタートボタン">
+        </div>
+        <div id="forward" class="btn">
+          <img class="controlIcon" src="img/feature/forwardBtn.png" alt="進むボタン">
+        </div>
+        <div id="repeat" class="btn">
+          <img class="controlIcon repeat" src="img/feature/repeatBtn.png" alt="リピートボタン">
+        </div>
+      </div>
+      <div id="playTime" class="playTime">
+        <p><time id="playBackPosition">0:00</time><input type="range" id="progress" value="0" min="0" step="0.1"><time id="endPosition">0:00</time></p>
+      </div>
+    </div>
+  <div>
+    
+  <footer>
+    <p><small>すべてフリー素材を使用しています</small></p>
+  </footer>
+  <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
