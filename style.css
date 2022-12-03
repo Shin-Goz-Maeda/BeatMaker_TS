@@ -36,25 +36,54 @@ header {
 }
 
 /* --- ボリューム全体（左） --- */
-#volumeControl {
+#volumeChange::after {
+  width: 20px;
+  height: 20px;
+  content: '';
+  display: inline-block;
+  background-image: url(img/volume/volume.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  margin-left: 10px;
+  margin-top: -3px;
+}
+
+#volumeChange[type="range"] {
   position: absolute;
-  left: 15%;
+  top: 120px;
+  left: 12%;
+  width: 250px;
+  height: 4px;
+  position: -webkit-sticky;
+  -webkit-appearance: none;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
-#volume {
-  width: 2rem;
-  height: 2rem;
-  margin-bottom: 10px;
+#volumeChange[type="range"]:focus {
+  outline: none;
 }
 
-input[type=range][orient=vertical] {
-  width: 2px;
-  height: 250px;
-  -webkit-appearance: slider-vertical;
+#volumeChange[type="range"]::-webkit-slider-runnable-track {
+  background-color: rgb(92, 186, 92);
+  border-radius: 4px;
+  width: 250px;
+  height: 5px;
   cursor: pointer;
-  background-color: white;
-  padding: 0 4px;
-  border-radius: 10px;
+}
+
+#volumeChange[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid purple;
+  margin-top: -7px;
+  cursor: pointer;
 }
 
 /* --- グラウンド全体（中央） --- */
@@ -107,14 +136,14 @@ li {
 .name::before {
   width: 20px;
   height: 20px;
+  position: relative;
+  top: 6px;
   content: '';
   display: inline-block;
   padding-right: 5px;
   background-image: url(img/menu/recode.png);
   background-size: 15px;
   background-repeat: no-repeat;
-  position: relative;
-  top: 6px;
 }
 
 
@@ -172,8 +201,35 @@ li {
   background-color: rgb(11, 11, 11);
 }
 
-#progress {
+#progress[type="range"] {
+  width: 250px;
+  height: 5px;
+  margin-top: 5px;
+  position: -webkit-sticky;
+  -webkit-appearance: none;
+}
+
+#progress[type="range"]:focus {
+  outline: none;
+}
+
+#progress[type="range"]::-webkit-slider-runnable-track {
+  background-color: white;
+  border-radius: 4px;
   width: 25%;
+  height: 6px;
+  cursor: pointer;
+}
+
+#progress[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid rgb(3, 60, 24);
+  cursor: pointer;
+  margin-top: -7px;
 }
 
 #playBackPosition { 

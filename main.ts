@@ -132,7 +132,7 @@ function markSound(num: number) {
 const startTimer = function() {
   playTimer = setInterval(function() {
     playBackPosition.textContent = convertTime(sound[whichSound].currentTime);
-   sliderProgress.value = Math.floor((sound[whichSound].currentTime / sound[whichSound].duration) * sound[whichSound].duration);
+    sliderProgress.value = Math.floor((sound[whichSound].currentTime / sound[whichSound].duration) * sound[whichSound].duration);
   }, 100);
 };
 
